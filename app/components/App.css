@@ -1,0 +1,25 @@
+.container {
+    margin: 0 auto;
+}
+
+.lang {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.lang li {
+    margin: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 110%;
+}
+
+.lang-active {
+    color: #d0021b;
+}
+
+.nav-list li {
+    font-size: 120%;
+}
