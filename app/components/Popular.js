@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import api from '../utils/api';
 
 function SelectLanguage(props) {
-    const languages = ['All', 'PHP', 'JavaScript', 'Python', 'Java', 'C', 'Go'];
+    const languages = ['All', 'PHP', 'JavaScript', 'Python', 'Java', 'C', 'Go', 'Ruby'];
 
     return (
         <ul className="lang">
@@ -35,6 +35,7 @@ function ReposList(props) {
                         <div className="repo-rank">#{index + 1}</div>
                         <img className="repo-avatar" src={repo.owner.avatar_url} alt={repo.full_name}/>
                         <a className="repo-name" href={ repo.html_url }>{ repo.name }</a>
+                        <a href={repo.owner.html_url} className="repo-author">@{repo.owner.login}</a>
                         <div className="repo-stars">{ repo.stargazers_count } stars</div>
                     </li>
                 );
