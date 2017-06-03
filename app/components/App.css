@@ -10,16 +10,91 @@
 }
 
 .lang li {
-    margin: 10px;
+    margin: 15px;
     font-weight: bold;
     cursor: pointer;
     font-size: 110%;
+}
+
+.lang li:hover {
+    color: #d0021b;
 }
 
 .lang-active {
     color: #d0021b;
 }
 
-.nav-list li {
+.loading {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: darkblue;
+    font-weight: bold;
+}
+
+
+.repos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+.repos:after {
+    content: "";
+    flex: auto;
+}
+
+.repos li {
+    margin: 30px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 200px;
+    overflow: hidden;
+}
+
+.repo-rank {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.repo-avatar {
+    width: 160px;
+    border-radius: 50%;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.repo-name {
+    text-decoration: none;
+    color: #000;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.nav a {
+    display: inline-block;
+    margin: 30px 20px;
+    text-decoration: none;
     font-size: 120%;
+    font-weight: bold;
+    color: #000;
+}
+
+.nav a:hover {
+    color: #d0021b;
+}
+
+.home h1 {
+    text-align: center;
 }
