@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import api from '../utils/api';
 
 function SelectLanguage(props) {
-    const languages = ['All', 'PHP', 'JavaScript', 'Python', 'Java', 'C', 'Go', 'Ruby'];
+    const languages = ['All', 'PHP', 'JavaScript', 'Python', 'Java', 'C', 'Go', 'Ruby', 'CSS'];
 
     return (
         <ul className="lang">

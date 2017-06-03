@@ -1,3 +1,4 @@
+@import '~normalize.css/normalize.css';
 ul {
     list-style: none;
     padding: 0;
@@ -21,7 +22,6 @@ a {
 .nav li {
     margin-right: 20px;
 }
-
 
 .container {
     margin: 0 auto;
@@ -143,4 +143,90 @@ a {
 
 .not-found h1 {
     color: darkorange;
+}
+
+.battle-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.battle-users {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.player {
+    height: 300px;
+    width: 400px;
+    margin: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.player-input {
+    width: 90%;
+    height: 35px;
+    line-height: 40px;
+    padding: 7px;
+    font-size: 17px;
+    border-radius: 3px;
+    box-shadow: none;
+}
+
+.player-submit {
+    width: 150px;
+    height: 40px;
+    background: #222;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.player-submit:hover {
+    background: #000;
+}
+
+.player-info {
+    height: 300px;
+    width: 400px;
+    margin: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-avatar {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.player-name {
+    margin: 25px 0;
+}
+
+.player-reset {
+    color: red;
+    cursor: pointer;
+}
+
+.battle-btn {
+    width: 200px;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
 }
