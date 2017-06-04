@@ -88,7 +88,7 @@ class Popular extends React.Component {
                 <SelectLanguage selectedLang={this.state.selectedLang} onSelect={this.changeSelectedLang}/>
                 {
                     this.state.repos ? <ReposList repos={ this.state.repos }/> :
-                        <Loading/>
+                        <Loading text='Getting repos'/>
                 }
 
             </div>
