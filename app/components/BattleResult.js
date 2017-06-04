@@ -12,6 +12,7 @@ function UserResult(props) {
 
     return (
         <div className="user-result">
+            <h1>{ props.label }</h1>
             <h2 className="user-score">Score: { score }</h2>
             <img className="user-avatar" src={ avatar } alt={profile.name}/>
             <h3 className="user-name"> { profile.name }</h3>
@@ -24,14 +25,17 @@ function UserResult(props) {
 }
 
 UserResult.propTypes = {
-    user: PropTypes.object.isRequired
+    user: PropTypes.object.isRequired,
+    label: PropTypes.string.isRequired
 };
 
 class BattleResult extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            users: {}
+            users: {},
+            loading: true,
+            error: ''
         };
     }
 
@@ -42,28 +46,40 @@ class BattleResult extends React.Component {
             users.playerOneName,
             users.playerTwoName
         ]).then((res) => {
+            if (res === null) {
+                that.setState(() => {
+                    return {
+                        loading: false,
+                        error: 'Error, checkout your network or the github name'
+                    }
+                });
+            }
             that.setState(() => {
-                console.info(res);
                 return {
-                    users: res
+                    users: res,
+                    loading: false,
+                    error: ''
                 }
             });
         });
     }
 
     render() {
+        if (this.state.error) {
+            return <div className="error">{ this.state.error }</div>;
+        }
+
+        if (this.state.loading) {
+            return <Loading/>;
+        }
+
         return (
-            <div>
-                { Object.keys(this.state.users).length > 0 ?
-                    <div className="battle-result-container">
-                        <div className="result-show">
-                            <UserResult user={this.state.users[0]}/>
-                            <UserResult user={this.state.users[1]}/>
-                        </div>
-                        <Link to="/battle" className="battle-again">Battle Again</Link>
-                    </div> :
-                    <Loading/>
-                }
+            <div className="battle-result-container">
+                <div className="result-show">
+                    <UserResult user={this.state.users[0]} label="Winner"/>
+                    <UserResult user={this.state.users[1]} label="Loser"/>
+                </div>
+                <Link to="/battle" className="battle-again">Battle Again</Link>
             </div>
         )
     }
