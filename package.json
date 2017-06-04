@@ -10,7 +10,8 @@
     ]
   },
   "scripts": {
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "build": "NODE_ENV='production' webpack -p"
   },
   "repository": "git@github.com:remfath/react-github-battle.git",
   "author": "Remfath Chan",
