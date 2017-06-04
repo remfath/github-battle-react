@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import api from '../utils/api';
+import Loading from './Loading';
 
 function SelectLanguage(props) {
     const languages = ['All', 'PHP', 'JavaScript', 'Python', 'Java', 'C', 'Go', 'Ruby', 'CSS'];
@@ -87,7 +88,7 @@ class Popular extends React.Component {
                 <SelectLanguage selectedLang={this.state.selectedLang} onSelect={this.changeSelectedLang}/>
                 {
                     this.state.repos ? <ReposList repos={ this.state.repos }/> :
-                        <div className="loading">Loading...</div>
+                        <Loading/>
                 }
 
             </div>

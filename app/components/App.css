@@ -1,4 +1,3 @@
-@import '~normalize.css/normalize.css';
 ul {
     list-style: none;
     padding: 0;
@@ -233,4 +232,56 @@ a {
     justify-content: center;
     align-items: center;
     border-radius: 4px;
+}
+
+.user-result {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+
+.user-avatar {
+    border-radius: 50%;
+    width: 250px;
+}
+
+.battle-result-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.battle-again {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+.user-detail {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.user-detail p {
+    margin: 2px 0;
 }

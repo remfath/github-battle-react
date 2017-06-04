@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
 class PlayerInput extends React.Component {
     constructor(props) {
@@ -138,7 +139,10 @@ class Battle extends React.Component {
                 </div>
 
                 { this.state.playerOneName && this.state.playerTwoName &&
-                <button className="battle-btn">Battle</button>
+                <Link to={{
+                    pathname: this.props.match.url + '/results',
+                    search: `?playerOneName=${this.state.playerOneName}&playerTwoName=${this.state.playerTwoName}`
+                }} className="battle-btn">Battle</Link>
                 }
             </div>
         )
