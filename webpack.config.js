@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
     entry: './app/index.js',
@@ -18,6 +19,14 @@ const config = {
             {
                 test: /\.(css)/,
                 use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.(sass|scss)$/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader",
+                ]
             }
         ]
     },
