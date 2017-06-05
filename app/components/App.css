@@ -74,7 +74,7 @@ a {
     flex-flow: row wrap;
     justify-content: space-between;
     list-style: none;
-    padding: 0;
+    padding: 20px 50px;
 }
 
 .repos:after {
