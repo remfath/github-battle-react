@@ -1,2 +1,2 @@
 # react-github-battle
-github battle by react
+this is a basic demo for react use
