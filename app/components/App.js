@@ -13,7 +13,7 @@ import {
 } from 'react-router-dom'
 
 
-import './App.scss';
+import '../static/css/App.scss';
 
 class App extends React.Component {
     render() {
