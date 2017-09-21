@@ -1,2 +1,2 @@
 # react-github-battle
-this is a basic demo for react use
+this is a demo for the basic use of react
